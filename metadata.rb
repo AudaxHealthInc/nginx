@@ -11,7 +11,7 @@ recipe 'nginx::source', 'Installs nginx from source and sets up configuration wi
 depends 'apt'
 depends 'bluepill'
 depends 'build-essential'
-depends 'ohai'
+depends 'ohai', '< 4.0.0'
 depends 'runit'
 depends 'yum-epel'
 
@@ -23,8 +23,6 @@ supports 'oracle'
 supports 'redhat'
 supports 'scientific'
 supports 'ubuntu'
-
-cookbook 'ohai', '< 4.0.0'
 
 attribute 'nginx/dir',
   :display_name => 'Nginx Directory',
