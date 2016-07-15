@@ -24,6 +24,8 @@ supports 'redhat'
 supports 'scientific'
 supports 'ubuntu'
 
+cookbook 'ohai', '< 4.0.0'
+
 attribute 'nginx/dir',
   :display_name => 'Nginx Directory',
   :description => 'Location of nginx configuration files',
