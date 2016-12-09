@@ -22,7 +22,7 @@
 include_recipe "nginx::#{node['nginx']['install_method']}"
 
 service 'nginx' do
-  reload_command '/etc/init.d/nginx upgrade'
+  reload_command '/etc/init.d/nginx upgrade || /etc/init.d/nginx reload'
   supports :status => true, :restart => true, :reload => true
   action   :start
 end
